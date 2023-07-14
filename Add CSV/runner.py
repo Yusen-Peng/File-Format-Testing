@@ -41,7 +41,7 @@ def main(file_formats, num_trials):
 
 if __name__ == '__main__':
     file_formats = ['CSV','HDF5','netCDF4','Zarr']
-                                                            # 3 file format to explore
+                                                            # 4 file format to explore
 
     num_trials = 5  
                                                             # Must be greater than 1
