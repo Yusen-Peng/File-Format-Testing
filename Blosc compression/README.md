@@ -1,4 +1,2 @@
-Blosc Compression
-
-Investigated the effect of Blosc compression on file common I/O performance among HDF5, netCDF4, and Zarr.
-Tested in Visual Studio Code with small data size.
+# Blosc Compression
+Investigate the effect of Blosc (Blosc_zstd) compression on file I/O performance (create, open, read, and write) among HDF5, netCDF4, Zarr.
