@@ -34,19 +34,15 @@ def read(file_format, filename, num_datasets, dimensions):
         else: 
             #load the CSV file
             dataset = np.loadtxt(f'CSV_data/CSV_data_{i}.csv', delimiter=',')
-                
-        
 
-        # record read-time 
+        
+        #record read-time 
         if len(dimensions) == 1:                     
             t1 = time.perf_counter()
             print(dataset[:dimensions[0]])
-        elif len(dimensions) == 2:
-            t1 = time.perf_counter()
-            print(dataset[:dimensions[0], :dimensions[1]])
         else:
             t1 = time.perf_counter()
-            print(dataset[:dimensions[0], :dimensions[1], :dimensions[2]])
+            print(dataset[:dimensions[0], :dimensions[1]])
         t2 = time.perf_counter()
 
         # calculate
