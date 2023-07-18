@@ -51,21 +51,15 @@ def write(file_format, filename, num_datasets, dimensions):
             np.savetxt(f'CSV_data/CSV_data_{i}.csv', dataset, delimiter=',',fmt='%f')
     
         #CSV -- write: 
-        #             step1: load CSV file; 
-        #             step2: populate it with random data;
-        #             step3: save CSV file.
+        #step1: load CSV file; 
+        #step2: populate it with random data;
+        #step3: save CSV file.
         if file_format == 'CSV':
             t1 = time.perf_counter()
             #load CSV file
             dataset = np.loadtxt(f'CSV_data/CSV_data_{i}.csv', delimiter=',')
-            #write a vector       
-            if len(dimensions) == 1:  
-                #populate it with random data
-                dataset[:dimensions[0]] = data   
-            #write a matrix
-            elif len(dimensions) == 2:
-                #populate it with random data
-                dataset[:dimensions[0], :dimensions[1]] = data
+            #populate it with random data
+            dataset[:dimensions[0]] = data  
             #save CSV file
             dataset = np.savetxt(f'CSV_data/CSV_data_{i}.csv', dataset, delimiter=',',fmt='%f')   
             t2 = time.perf_counter()
