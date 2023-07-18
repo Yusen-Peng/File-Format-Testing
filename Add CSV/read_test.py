@@ -30,17 +30,11 @@ def read(file_format, filename, num_datasets, dimensions):
         elif file_format == 'Zarr':
             dataset = file.get(f'Dataset_{i}')
         
-        #load CSV files
-        else:
-            t1 = time.perf_counter()
-            if len(dimensions) == 1: 
-                #load the CSV file
-                dataset = np.loadtxt(f'CSV_data/CSV_data_{i}.csv', delimiter=',')
-            else:
-                #load the CSV file
-                dataset = np.loadtxt(f'CSV_data/CSV_data_{i}.csv', delimiter=',')
-                #reshape into a matrix
-                dataset = dataset.reshape(dimensions[0], dimensions[1])
+       #load CSV files
+        else: 
+            #load the CSV file
+            dataset = np.loadtxt(f'CSV_data/CSV_data_{i}.csv', delimiter=',')
+                
         
 
         # record read-time 
