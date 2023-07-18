@@ -64,8 +64,6 @@ def write(file_format, filename, num_datasets, dimensions):
                 dataset[:dimensions[0]] = data   
             #write a matrix
             elif len(dimensions) == 2:
-                #reshape into a matrix
-                dataset.reshape(dimensions[0], dimensions[1])
                 #populate it with random data
                 dataset[:dimensions[0], :dimensions[1]] = data
             #save CSV file
