@@ -14,7 +14,8 @@ def run_benchmark(config_file, file_formats, num_trials):
         num_datasets = config.get('NUMBER_DATASETS')
         dimensions = config.get('NUMBER_ELEMENTS')
                                                             
-
+    #Use a different approach to avoid caching effect: write all -- read all 
+    
     #Create CSV templates for each file format
     for file_format in file_formats:
         with open(f'csv_file/{file_format}_{num_datasets}_{dimensions}.csv', 'w') as csvfile:
