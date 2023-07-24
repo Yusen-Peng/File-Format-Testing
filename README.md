@@ -23,6 +23,15 @@ After the benchmark is done, the program then stores the times taken across mult
 data with [matplotlib.pyplot](https://github.com/matplotlib/matplotlib) to allow the user to make a definitive
 comparison between the file formats being tested.
 
+## Basic Comparison
+Developed benchmarks to compare CSV file I/O performance with HDF5, netCDF4, and Zarr
+
+## Compression Effect
+Developed benchmarks to test the Blosc_zstd compression effect on flle I/O performance among HDF5, netCDF4, and Zarr
+
+## HDF5 Compound Datatype
+Developed benchmarks to compare compound datatype HDF5 file I/O performance with CSV file format
+
 ## How to Run
 
 1. Install the requirements found in the `requirements.txt` file.
