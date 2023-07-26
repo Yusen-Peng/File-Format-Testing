@@ -24,13 +24,13 @@ data with [matplotlib.pyplot](https://github.com/matplotlib/matplotlib) to allow
 comparison between the file formats being tested.
 
 ## Basic Comparison
-Developed benchmarks to compare CSV file I/O performance with HDF5, netCDF4, and Zarr
+Developed benchmarks to compare CSV file I/O performance with HDF5, netCDF4, and Zarr.
 
 ## Compression Effect
-Developed benchmarks to test the Blosc_zstd compression effect on flle I/O performance among HDF5, netCDF4, and Zarr
+Developed benchmarks to test the Blosc_zstd compression effect on flle I/O performance among HDF5, netCDF4, and Zarr.
 
 ## HDF5 Compound Datatype
-Developed benchmarks to compare compound datatype HDF5 file I/O performance with CSV file format
+Developed benchmarks to compare compound datatype HDF5 file I/O performance with CSV file format. Compared four different approaches of reading benchmark performance.
 
 ## How to Run
 
@@ -39,7 +39,3 @@ Developed benchmarks to compare compound datatype HDF5 file I/O performance with
    a configuration file will be generated. Otherwise, the benchmark will be run with all `.yaml` configuration files
    found in the directory. The benchmark will test each file format 5 times, but this can be
    modified by changing the `num_trials` variable in the `runner.py` file.
-
-Note: Both the CSV files and the Plots can be found under the generated `datasets_test/data/` folder after the benchmark
-is
-run.
