@@ -32,8 +32,10 @@ Developed benchmarks to test the Blosc_zstd compression effect on flle I/O perfo
 ## HDF5 Compound Datatype
 Developed benchmarks to compare compound datatype HDF5 file I/O performance with CSV file format. Compared four different approaches of reading benchmark performance.
 
-## How to Run
+## Scale Element Comparison 
+Developed benchmarks to generate plots in 4 different scale element comparison.
 
+## How to Run
 1. Install the requirements found in the `requirements.txt` file.
 2. Run the `runner.py` file. If no configuration files are found in the `datasets_test/configuration_files/` directory,
    a configuration file will be generated. Otherwise, the benchmark will be run with all `.yaml` configuration files
