@@ -44,3 +44,10 @@ standard deviation of create, write, open, read performance. When it comes to ma
    a configuration file will be generated. Otherwise, the benchmark will be run with all `.yaml` configuration files
    found in the directory. The benchmark will test each file format 5 times, but this can be
    modified by changing the `num_trials` variable in the `runner.py` file.
+
+
+
+
+## Small Scale Testing
+
+## netCDF4 Optimization
