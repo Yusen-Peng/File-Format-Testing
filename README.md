@@ -17,19 +17,14 @@ and used the results of these benchmarks to compare three popular formats: `HDF5
    found in the directory. The benchmark will test each file format 5 times, but this can be
    modified by changing the `num_trials` variable in the `runner.py` file.
 
-
 ## Section 1: Small Scale Testing
 This benchmark compares the time taken to create a dataset, write data to a dataset, and finally open that dataset at a
 later time and read its contents. This can be categorized into two types of operations: the writing operation and the
-reading operation.
-
-Additionally, this benchmark uses a configuration-based system in which the user is able to specify the testing
+reading operation.Additionally, this benchmark uses a configuration-based system in which the user is able to specify the testing
 parameters such as the number of datasets to create within the file and the dimensions of the array that will be written
-to each dataset by editing a YAML configuration file.
-
-After the benchmark is done, the program then stores the times taken across multiple trials in a CSV file and plots its
-data with [matplotlib.pyplot](https://github.com/matplotlib/matplotlib) to allow the user to make a definitive
-comparison between the file formats being tested.
+to each dataset by editing a `YAML` configuration file.After the benchmark is done, the program then stores the times 
+taken across multiple trials in a CSV file and plots its data with [matplotlib.pyplot](https://github.com/matplotlib/matplotlib) 
+to allow the user to make a definitive comparison between the file formats being tested.
 
 ## Section 2: netCDF4 Optimization
 
