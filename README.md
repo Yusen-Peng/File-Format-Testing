@@ -27,11 +27,16 @@ taken across multiple trials in a CSV file and plots its data with [matplotlib.p
 to allow the user to make a definitive comparison between the file formats being tested.
 
 ## Section 2: netCDF4 Optimization
+In theory, netCDF4 generally writes faster if all datasets are created before being written, compared to the case where
+each dataset is written immediately after being created. Thereby, the loop structure is changed from single loop (each
+dataset is written immediately after being created) to separate loop (all datasets are created before being written). In the
+experiment, two plots are made to validate the optimization above.
 
 ## Section 3: Comparison with CSV 
 Developed benchmarks to compare CSV file I/O performance with HDF5, netCDF4, and Zarr. The ”write all, read all” approach in the runner.py python file is used to eliminate any caching effect. In other words, ”write all, read all” means to finish writing the random data into datasets associated with all file formats (HDF5, netCDF4, zarr) before reading them. This helps avoid any caching effect when reading files. In terms of implementation details, dictionary and list in Python are applied. Specifically, one dictionary is created for every single I/Ooperation: create, write, open, read. These dictionaries are mapping each file format to its performance data list of the corresponding I/O operation. These data lists keep track of the performance measurements from all of repeated trials. In this experiment, the number of repeated trials is 5. Dictionaries for create, write, open, read benchmarks are utilized to store and transfer performance data to csv files later for plotting.
 
 ## Section 4: Large Scale Testing - Basic Comparison
+Same setyp as small-scale testing, but with much larger data size configuration.
 
 ## Section 5: Scale Element Comparison - Basic Comparison
 Developed benchmarks to generate plots in 4 different scale element comparison. In order to identify the performance trend or pattern with different scales of increasing number of elements, the scale element comparison section is added to this benchmark project. The number of elements is increasing in four different scales, whereas the number of datasets is fixed. The scale element comparison is applied to both basic comparison (comparison among HDF5, netCDF4, and zarr) and compression comparison (HDF5, netCDF4, zarr, and corresponding compressed versions). In terms of the implementaion details, various data structures like dictionary and list in
