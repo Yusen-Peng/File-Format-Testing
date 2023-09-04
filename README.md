@@ -53,6 +53,6 @@ Scale element comparison in the context of Blosc_zstd compression. Refer to Sect
 Developed benchmarks to compare compound datatype HDF5 file I/O performance with CSV file format. Compared four different approaches of reading benchmark performance. 
 The compound datatype in HDF5 is a similar data model to csv files. In this benchmark project, the performance of write/read operations are measured for both HDF5 compound datatype and csv files. Specifically, in the write benchmark for HDF5 compound datatype, the random data are written into one single compound dataset by properties; However, in the case of csv files, random data could be written either by columns or by rows. Accordingly, both writing approaches are considered and implemented respectively. To write random data by columns, the dataframe in pandas is utilized to populate data into columns. In order to write data by rows, on the other hand, the csv.writer in csv module is used to write data in a row-wise fashion. In the read benchmark for compound datatype, four different reading approaches are proposed and implemented respectively: read data by columns; read data by rows; read the entire dataset; read data by the first half of rows. All reading approaches are implemented by dataframe and df.iloc function in pandas library.
 
-
+# extra Python files
 ## log scale conversion
 `log_conversion` is a Python file that conbverts plots into log scale in y direction. This helps visualization when the performance difference between file formats is extremely large.
