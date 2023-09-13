@@ -56,5 +56,6 @@ The compound datatype in HDF5 is a similar data model to csv files. In this benc
 ## Extra Python files
 ### log scale conversion
 `log_conversion` is a Python file that converts plots into log scale in y direction. This helps better visualization when the performance difference between file formats is extremely large.
-### debug file: write timer
-`write_timing` is a Python file that measures the time of multiple code chunks in the write process and stores data to a folder of csv files. 
+### Extra debugging files 
+`write_timing` is a Python file that measures the time of multiple code chunks in the write process and stores data to a folder of csv files.
+`timing_verification` is a Python file that reads csv data files to calculate the total amount of time of per execution in milliseconds. 
